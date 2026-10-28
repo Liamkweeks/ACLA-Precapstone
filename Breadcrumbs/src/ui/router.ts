@@ -1,11 +1,11 @@
-import { renderSidebar } from './layout/sidebar';
-import { loginView } from './screens/login';
-import { reportsView } from './screens/reports';
-import { requestsView } from './screens/requests';
-import { newRequestView } from './screens/new_requests';
-import { approvalsView } from './screens/approvals';
-import { auditLogView } from './screens/audit_log';
-import { userRolesView } from './screens/user_and_roles';
+import { renderSidebar } from './layout/Sidebar';
+import { loginView } from './screens/Login';
+import { reportsView } from './screens/Reports';
+import { requestsView } from './screens/Requests';
+import { newRequestView } from './screens/NewRequests';
+import { approvalsView } from './screens/Approvals';
+import { auditLogView } from './screens/AuditLog';
+import { userRolesView } from './screens/UserAndReports';
 
 export type Route = 'login' | 'reports' | 'requests' | 'new_request' | 'approvals' | 'audit_log' | 'user_roles';
 

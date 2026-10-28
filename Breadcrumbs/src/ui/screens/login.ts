@@ -1,4 +1,4 @@
-import { navigate } from '../router';
+import { navigate } from '../Router';
 
 export function loginView(root: HTMLElement) {
   root.innerHTML = `<h2>Login</h2><button id="go">Sign In</button>`;

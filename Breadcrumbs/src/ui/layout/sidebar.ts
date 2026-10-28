@@ -1,4 +1,4 @@
-import { navigate } from '../router';
+import { navigate } from '../Router';
 
 export function renderSidebar(el: HTMLElement) {
   el.innerHTML = `
