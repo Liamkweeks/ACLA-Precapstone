@@ -1,4 +1,5 @@
-import './index.css';
-import { navigate } from './ui/Router';
+import "./index.css";
+import { navigate } from "./ui/router";
 
-navigate('login');
+navigate("login");
+

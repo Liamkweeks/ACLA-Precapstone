@@ -1,4 +1,4 @@
-import { navigate } from '../Router';
+import { navigate } from "../router";
 
 export function renderSidebar(el: HTMLElement) {
   el.innerHTML = `
@@ -8,9 +8,19 @@ export function renderSidebar(el: HTMLElement) {
     <button id="nav-audit">Audit Log</button>
     <button id="nav-roles">User Roles</button>
   `;
-  el.querySelector('#nav-reports')!.addEventListener('click', () => navigate('reports'));
-  el.querySelector('#nav-requests')!.addEventListener('click', () => navigate('requests'));
-  el.querySelector('#nav-approvals')!.addEventListener('click', () => navigate('approvals'));
-  el.querySelector('#nav-audit')!.addEventListener('click', () => navigate('audit_log'));
-  el.querySelector('#nav-roles')!.addEventListener('click', () => navigate('user_roles'));
+  el.querySelector("#nav-reports")!.addEventListener("click", () =>
+    navigate("reports"),
+  );
+  el.querySelector("#nav-requests")!.addEventListener("click", () =>
+    navigate("requests"),
+  );
+  el.querySelector("#nav-approvals")!.addEventListener("click", () =>
+    navigate("approvals"),
+  );
+  el.querySelector("#nav-audit")!.addEventListener("click", () =>
+    navigate("audit_log"),
+  );
+  el.querySelector("#nav-roles")!.addEventListener("click", () =>
+    navigate("user_roles"),
+  );
 }
