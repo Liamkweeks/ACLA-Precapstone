@@ -1,10 +1,10 @@
 import { renderSidebar } from "./layout/sidebar";
-import { loginView } from "./screens/Login";
-import { reportsView } from "./screens/reports";
+import { loginView } from "./screens/login";
+import { reportsView } from "./screens/Reports";
 import { requestsView } from "./screens/Requests";
 import { newRequestView } from "./screens/NewRequests";
 import { approvalsView } from "./screens/Approvals";
-import { auditLogView } from "./screens/auditLog";
+import { auditLogView } from "./screens/AuditLog";
 import { userRolesView } from "./screens/UserAndReports";
 
 export type Route =
