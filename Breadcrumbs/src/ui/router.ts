@@ -1,13 +1,20 @@
-import { renderSidebar } from './layout/Sidebar';
-import { loginView } from './screens/Login';
-import { reportsView } from './screens/Reports';
-import { requestsView } from './screens/Requests';
-import { newRequestView } from './screens/NewRequests';
-import { approvalsView } from './screens/Approvals';
-import { auditLogView } from './screens/AuditLog';
-import { userRolesView } from './screens/UserAndReports';
+import { renderSidebar } from "./layout/sidebar";
+import { loginView } from "./screens/Login";
+import { reportsView } from "./screens/reports";
+import { requestsView } from "./screens/Requests";
+import { newRequestView } from "./screens/NewRequests";
+import { approvalsView } from "./screens/Approvals";
+import { auditLogView } from "./screens/auditLog";
+import { userRolesView } from "./screens/UserAndReports";
 
-export type Route = 'login' | 'reports' | 'requests' | 'new_request' | 'approvals' | 'audit_log' | 'user_roles';
+export type Route =
+  | "login"
+  | "reports"
+  | "requests"
+  | "new_request"
+  | "approvals"
+  | "audit_log"
+  | "user_roles";
 
 const screens: Record<Route, (root: HTMLElement) => void> = {
   login: loginView,

@@ -1,4 +1,4 @@
-import { navigate, Route } from '../Router';
+import { navigate, Route } from '../router';
 
 const tabs: { route: Route; label: string }[] = [
   { route: 'reports', label: 'Reports' },
