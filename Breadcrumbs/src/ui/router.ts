@@ -1,11 +1,11 @@
 import { renderSidebar } from "./layout/sidebar";
 import { loginView } from "./screens/login";
-import { reportsView } from "./screens/reports";
-import { requestsView } from "./screens/requests";
-import { newRequestView } from "./screens/newRequests";
-import { approvalsView } from "./screens/approvals";
-import { auditLogView } from "./screens/auditLog";
-import { userRolesView } from "./screens/userAndReports";
+import { reportsView } from "./screens/Reports";
+import { requestsView } from "./screens/Requests";
+import { newRequestView } from "./screens/NewRequests";
+import { ApprovalsView } from "./screens/Approvals";
+import { auditLogView } from "./screens/AuditLog";
+import { userRolesView } from "./screens/UserAndReports";
 
 export type Route =
   | "login"
@@ -21,7 +21,7 @@ const screens = {
   reports: reportsView,
   requests: requestsView,
   new_request: newRequestView,
-  approvals: approvalsView,
+  approvals: ApprovalsView,
   audit_log: auditLogView,
   user_roles: userRolesView,
 };
