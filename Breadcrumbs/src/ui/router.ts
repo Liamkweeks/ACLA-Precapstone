@@ -3,7 +3,9 @@ import { loginView } from "./screens/login";
 import { reportsView } from "./screens/Reports";
 import { requestsView } from "./screens/Requests";
 import { newRequestView } from "./screens/NewRequests";
+
 import { approvalsView } from "./screens/Approvals";
+
 import { auditLogView } from "./screens/AuditLog";
 import { userRolesView } from "./screens/UserAndReports";
 
@@ -21,7 +23,7 @@ const screens: Record<Route, (root: HTMLElement) => void> = {
   reports: reportsView,
   requests: requestsView,
   new_request: newRequestView,
-  approvals: approvalsView,
+  approvals: ApprovalsView,
   audit_log: auditLogView,
   user_roles: userRolesView,
 };
