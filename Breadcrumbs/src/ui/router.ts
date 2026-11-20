@@ -3,7 +3,9 @@ import { loginView } from "./screens/login";
 import { reportsView } from "./screens/Reports";
 import { requestsView } from "./screens/Requests";
 import { newRequestView } from "./screens/NewRequests";
-import { ApprovalsView } from "./screens/Approvals";
+
+import { approvalsView } from "./screens/Approvals";
+
 import { auditLogView } from "./screens/AuditLog";
 import { userRolesView } from "./screens/UserAndReports";
 
@@ -16,7 +18,7 @@ export type Route =
   | "audit_log"
   | "user_roles";
 
-const screens = {
+const screens: Record<Route, (root: HTMLElement) => void> = {
   login: loginView,
   reports: reportsView,
   requests: requestsView,
@@ -27,13 +29,20 @@ const screens = {
 };
 
 export function navigate(route: Route) {
-  const app = document.getElementById("app")!;
-  if (route === "login") {
-    app.innerHTML = "";
-    screens.login(app);
-    return;
-  }
+  const app = document.getElementById('app')!;
+
+  if (route === 'login') {
+  app.className = 'login-layout';
+  app.innerHTML = '';
+  screens.login(app);
+  return;
+}
+
+  app.className = 'app-layout';
   app.innerHTML = `<aside id="sidebar"></aside><main id="content"></main>`;
-  renderSidebar(app.querySelector("#sidebar")!);
-  screens[route](app.querySelector("#content")!);
+
+  const activeTab: Route = route === 'new_request' ? 'reports' : route;
+  renderSidebar(app.querySelector('#sidebar')!, activeTab);
+
+  screens[route](app.querySelector('#content')!);
 }
