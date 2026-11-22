@@ -9,11 +9,13 @@
   --dark: #4a4a4a;
 }
 
-* { box-sizing: border-box; }
+* {
+  box-sizing: border-box;
+}
 
 body {
   margin: 0;
-  font-family: 'Inter', 'Segoe UI', system-ui, sans-serif;
+  font-family: "Inter", "Segoe UI", system-ui, sans-serif;
   color: var(--text);
 }
 
@@ -37,7 +39,11 @@ body {
   margin: 0 16px 40px;
 }
 
-.tabs { display: flex; flex-direction: column; gap: 4px; }
+.tabs {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
 
 .tab {
   text-align: left;
@@ -51,8 +57,13 @@ body {
   color: var(--text);
   cursor: pointer;
 }
-.tab:hover  { background: var(--tab-hover); }
-.tab.active { background: var(--tab-active); color: white; }
+.tab:hover {
+  background: var(--tab-hover);
+}
+.tab.active {
+  background: var(--tab-active);
+  color: white;
+}
 
 .user {
   margin-top: auto;
@@ -66,7 +77,10 @@ body {
   overflow-y: auto;
 }
 
-#content h2 { font-size: 15px; margin: 0 0 16px; }
+#content h2 {
+  font-size: 15px;
+  margin: 0 0 16px;
+}
 
 /* login */
 .login-layout {
@@ -85,10 +99,22 @@ body {
   flex-direction: column;
 }
 
-.login-title    { text-align: center; font-size: 15px; font-weight: 600; margin: 0 0 16px; }
-.login-subtitle { font-size: 13px; margin: 0 0 24px; }
+.login-title {
+  text-align: center;
+  font-size: 15px;
+  font-weight: 600;
+  margin: 0 0 16px;
+}
+.login-subtitle {
+  font-size: 13px;
+  margin: 0 0 24px;
+}
 
-.login-card label { font-size: 12px; font-weight: 600; margin-bottom: 6px; }
+.login-card label {
+  font-size: 12px;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
 
 .login-card input {
   padding: 10px 12px;
@@ -99,9 +125,16 @@ body {
   font: inherit;
   font-size: 13px;
 }
-.login-card input::placeholder { text-align: center; color: #aaa; }
+.login-card input::placeholder {
+  text-align: center;
+  color: #aaa;
+}
 
-.login-error { color: #b3261e; font-size: 12px; margin: -8px 0 12px; }
+.login-error {
+  color: #b3261e;
+  font-size: 12px;
+  margin: -8px 0 12px;
+}
 
 /* shared buttons */
 .btn-dark {
@@ -115,4 +148,21 @@ body {
   font-weight: 600;
   cursor: pointer;
 }
-.btn-dark:hover { opacity: 0.9; }
+.btn-dark:hover {
+  opacity: 0.9;
+}
+
+.report-card-main {
+  background-color: var(--sidebar-bg);
+  border-radius: 6px;
+  flex-direction: column;
+}
+
+.report-card-section {
+  flex-direction: row;
+}
+
+.new-badge {
+  background-color: var(--content-bg);
+  border-radius: 4px;
+}
