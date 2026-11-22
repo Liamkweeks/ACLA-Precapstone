@@ -7,6 +7,10 @@
   --login-card: #c9c9c9;
   --input-bg: #eeeeee;
   --dark: #4a4a4a;
+  --card-bg-dark-grey: #989898;
+  --card-bg-grey: #b5b5b5;
+  --card-bg-darker-grey: #686868;
+  --card-bg: #d2d2d2;
 }
 
 * {
@@ -176,4 +180,109 @@ body {
   padding: 2px 6px;
   justify-content: center;
   align-items: center;
+}
+
+.approvals-layout {
+  display: flex;
+  flex: 1;
+  flex-direction: row;
+  gap: 15px;
+}
+
+.approvals-list-section {
+  flex: 1;
+  flex-direction: column;
+}
+
+.approvals-main-section {
+  flex: 2;
+  flex-direction: column;
+  justify-self: center;
+  align-self: center;
+}
+
+.report-card-list {
+  flex-direction: column;
+  display: flex;
+  gap: 25px;
+}
+
+#report-review-card {
+  border-radius: 8px;
+  background-color: var(--card-bg);
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.review-info-section {
+  background-color: var(--card-bg-dark-grey);
+  padding: 10px;
+  display: flex;
+  align-items: space-between;
+  justify-content: space-between;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+
+.review-info-text {
+  color: var(--text);
+}
+
+.review-info-file {
+  background-color: var(--card-bg-grey);
+  display: flex;
+  align-items: space-between;
+  justify-content: space-between;
+  border-radius: 4px;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+#review-info-file-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.file-button,
+#approve-button,
+#reject-button {
+  padding: 10px;
+  border-radius: 12px;
+}
+.file-button {
+  background-color: var(--card-bg-dark-grey);
+}
+
+#approve-button {
+  background-color: var(--card-bg-darker-grey);
+}
+
+#reject-button {
+  background-color: var(--card-bg-dark-grey);
+}
+
+.review-buttons {
+  display: flex;
+  justify-content: right;
+  gap: 24px;
+}
+
+.text-input-box {
+  border: 1px solid var(--card-bg-darker-grey);
+  padding: 5px;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+
+.signature-box {
+  border: 3px dashed var(--card-bg-grey);
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  height: 100px;
+  padding: 5px;
+  border-radius: 4px;
+  margin-bottom: 16px;
 }
