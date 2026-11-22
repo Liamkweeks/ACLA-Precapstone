@@ -15,20 +15,20 @@ export default function ReportCard(
 
     <div class="report-card-main">
 
-      <div class="report-card-section">
+      <div class="report-card-header">
         <h2>${title}</h2>
         ${isNew ? '<span class="new-badge">New</span>' : ""}
       </div>
 
-      <div class="report-card-section">
+      <div >
         <span >
-          ${reportType === "request" ? "Requested by" : "Submitted by"}
+          ${reportType === "request" ? "Requested by " : "Submitted by "}
         </span>
         <span>${createdBy}</span>
       
       </div>
       
-      <div class="report-card-section">
+      <div >
         <span >
           Due: ${formattedDueDate}
         </span>
