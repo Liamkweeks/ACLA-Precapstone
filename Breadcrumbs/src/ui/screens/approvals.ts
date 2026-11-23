@@ -1,4 +1,5 @@
 import ReportCard from "../components/ReportCard";
+import "../../styles/approvals.css"
 export function approvalsView(root: HTMLElement) {
   root.innerHTML = `
     <h2>Approvals</h2>
