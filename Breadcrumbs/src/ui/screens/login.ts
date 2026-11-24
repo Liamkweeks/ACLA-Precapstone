@@ -1,5 +1,11 @@
 import { navigate } from "../router";
-
+import { supabase } from "../../utils/supabase";
+async function signInWithEmail() {
+  const { data, error } = await supabase.auth.signInWithPassword({
+    email: 'valid.email@supabase.io',
+    password: 'example-password',
+  })
+}
 export function loginView(root: HTMLElement) {
   root.innerHTML = `
     <form class="login-card" id="login-form">
@@ -31,7 +37,6 @@ export function loginView(root: HTMLElement) {
       error.hidden = false;
       return;
     }
-
-    navigate('reports');
+  navigate('reports')
   });
 }
