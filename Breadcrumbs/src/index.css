@@ -7,13 +7,19 @@
   --login-card: #c9c9c9;
   --input-bg: #eeeeee;
   --dark: #4a4a4a;
+  --card-bg-dark-grey: #989898;
+  --card-bg-grey: #b5b5b5;
+  --card-bg-darker-grey: #686868;
+  --card-bg: #d2d2d2;
 }
 
-* { box-sizing: border-box; }
+* {
+  box-sizing: border-box;
+}
 
 body {
   margin: 0;
-  font-family: 'Inter', 'Segoe UI', system-ui, sans-serif;
+  font-family: "Inter", "Segoe UI", system-ui, sans-serif;
   color: var(--text);
 }
 
@@ -37,7 +43,11 @@ body {
   margin: 0 16px 40px;
 }
 
-.tabs { display: flex; flex-direction: column; gap: 4px; }
+.tabs {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
 
 .tab {
   text-align: left;
@@ -51,8 +61,13 @@ body {
   color: var(--text);
   cursor: pointer;
 }
-.tab:hover  { background: var(--tab-hover); }
-.tab.active { background: var(--tab-active); color: white; }
+.tab:hover {
+  background: var(--tab-hover);
+}
+.tab.active {
+  background: var(--tab-active);
+  color: white;
+}
 
 .user {
   margin-top: auto;
@@ -66,7 +81,10 @@ body {
   overflow-y: auto;
 }
 
-#content h2 { font-size: 15px; margin: 0 0 16px; }
+#content h2 {
+  font-size: 15px;
+  margin: 0 0 16px;
+}
 
 /* login */
 .login-layout {
@@ -85,10 +103,22 @@ body {
   flex-direction: column;
 }
 
-.login-title    { text-align: center; font-size: 15px; font-weight: 600; margin: 0 0 16px; }
-.login-subtitle { font-size: 13px; margin: 0 0 24px; }
+.login-title {
+  text-align: center;
+  font-size: 15px;
+  font-weight: 600;
+  margin: 0 0 16px;
+}
+.login-subtitle {
+  font-size: 13px;
+  margin: 0 0 24px;
+}
 
-.login-card label { font-size: 12px; font-weight: 600; margin-bottom: 6px; }
+.login-card label {
+  font-size: 12px;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
 
 .login-card input {
   padding: 10px 12px;
@@ -99,9 +129,16 @@ body {
   font: inherit;
   font-size: 13px;
 }
-.login-card input::placeholder { text-align: center; color: #aaa; }
+.login-card input::placeholder {
+  text-align: center;
+  color: #aaa;
+}
 
-.login-error { color: #b3261e; font-size: 12px; margin: -8px 0 12px; }
+.login-error {
+  color: #b3261e;
+  font-size: 12px;
+  margin: -8px 0 12px;
+}
 
 /* shared buttons */
 .btn-dark {
@@ -115,4 +152,137 @@ body {
   font-weight: 600;
   cursor: pointer;
 }
-.btn-dark:hover { opacity: 0.9; }
+.btn-dark:hover {
+  opacity: 0.9;
+}
+
+.report-card-main {
+  background-color: var(--sidebar-bg);
+  border-radius: 6px;
+  flex-direction: column;
+  padding: 8px;
+}
+
+.report-card-header {
+  flex-direction: row;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+#content .report-card-header h2 {
+  margin: 0;
+}
+
+.new-badge {
+  background-color: var(--content-bg);
+  border-radius: 4px;
+  padding: 2px 6px;
+  justify-content: center;
+  align-items: center;
+}
+
+.approvals-layout {
+  display: flex;
+  flex: 1;
+  flex-direction: row;
+  gap: 15px;
+}
+
+.approvals-list-section {
+  flex: 1;
+  flex-direction: column;
+}
+
+.approvals-main-section {
+  flex: 2;
+  flex-direction: column;
+  justify-self: center;
+  align-self: center;
+}
+
+.report-card-list {
+  flex-direction: column;
+  display: flex;
+  gap: 25px;
+}
+
+#report-review-card {
+  border-radius: 8px;
+  background-color: var(--card-bg);
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.review-info-section {
+  background-color: var(--card-bg-dark-grey);
+  padding: 10px;
+  display: flex;
+  align-items: space-between;
+  justify-content: space-between;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+
+.review-info-text {
+  color: var(--text);
+}
+
+.review-info-file {
+  background-color: var(--card-bg-grey);
+  display: flex;
+  align-items: space-between;
+  justify-content: space-between;
+  border-radius: 4px;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+#review-info-file-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.file-button,
+#approve-button,
+#reject-button {
+  padding: 10px;
+  border-radius: 12px;
+}
+.file-button {
+  background-color: var(--card-bg-dark-grey);
+}
+
+#approve-button {
+  background-color: var(--card-bg-darker-grey);
+}
+
+#reject-button {
+  background-color: var(--card-bg-dark-grey);
+}
+
+.review-buttons {
+  display: flex;
+  justify-content: right;
+  gap: 24px;
+}
+
+.text-input-box {
+  border: 1px solid var(--card-bg-darker-grey);
+  padding: 5px;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+
+.signature-box {
+  border: 3px dashed var(--card-bg-grey);
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  height: 100px;
+  padding: 5px;
+  border-radius: 4px;
+  margin-bottom: 16px;
+}
