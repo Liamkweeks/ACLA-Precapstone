@@ -1,0 +1,28 @@
+.header-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: auto;
+}
+
+.header-button {
+  background-color: #4f4f4f;
+  color: white;
+  font-size: medium;
+  font-weight: bolder;
+  border-radius: 20px;
+  border-color: #2d2d2d;
+  border-width: 1px;
+  padding: 10px;
+  border-style: solid;
+}
+
+.pending-bar {
+  width: 100%;
+  background-color: #d6d6d6;
+  border-color: #212121;
+  border-radius: 20px;
+  border-width: 2px;
+  border-style: solid;
+  padding-left: 10px;
+}
