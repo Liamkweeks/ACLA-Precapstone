@@ -14,7 +14,7 @@ export function newRequestView(root: HTMLElement) {
       
       <p class="no-submitter-email-error" id="no-submitter-email-error" hidden></p>
 
-      <button type="submit" class="btn-dark">Submit Request</button>
+      <button type="submit">Submit Request</button>
     </form>`;
   
 }
