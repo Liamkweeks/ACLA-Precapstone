@@ -26,3 +26,26 @@
   border-style: solid;
   padding-left: 10px;
 }
+
+.report-bar-main {
+  display: flex;
+  flex-direction: row;
+}
+
+.report-list-header {
+  display: flex;
+  flex-direction: row;
+}
+
+.report-bar-text-s {
+  flex: 1;
+}
+
+.report-bar-text-l {
+  flex: 2;
+}
+
+.report-bar-status {
+  flex: 1;
+  text-align: center;
+}
